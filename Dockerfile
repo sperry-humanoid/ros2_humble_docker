@@ -20,7 +20,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
     && rm -rf /var/lib/apt/lists/*
 
 # Python utilities (optional)
-RUN pip3 install --no-cache-dir pyserial
+RUN pip3 install --no-cache-dir pyserial requests
 
 # Create user to match host UID/GID so mounted files have sane permissions
 ARG USER_ID=1000
